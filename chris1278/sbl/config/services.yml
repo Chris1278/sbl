@@ -1,0 +1,9 @@
+services:
+    chris1278.sbl.listener:
+        class: chris1278\sbl\event\listener
+        arguments:
+            - '%core.root_path%'
+            - '@user'
+            - '@template'
+        tags:
+            - { name: event.listener }

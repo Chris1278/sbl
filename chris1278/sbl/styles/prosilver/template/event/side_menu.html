@@ -1,0 +1,127 @@
+<div class="forabg">
+		<div class="inner">
+			<ul class="topiclist">
+				<li class="header">
+					<dl class="row-item">
+						<dt>{L_SBL_FORUM_MENU}</dt>
+						<dd></dd>
+					</dl>
+				</li>
+			</ul>	
+			<ul class="topiclist">
+				<li class="bg1 logbox">
+				<div class="menutitle">{L_SBL_CONTENT}</div>
+				<a href="{U_INDEX}" class="f4"><i class="icon fa-home fa-fw" aria-hidden="true"></i></i><span class="f2">{L_INDEX}</span></a><br />
+				<a href="{U_SEARCH}" class="f4"><i class="icon fa-arrow-circle-o-right fa-fw" aria-hidden="true"></i><span class="f2">{L_SEARCH}</span></a><br />
+				<a href="{U_MEMBERLIST}" class="f4"><i class="icon fa-arrow-circle-o-right fa-fw" aria-hidden="true"></i><span class="f2">{L_MEMBERLIST}</span></a><br />
+				<a href="{U_TEAM}" class="f4"><i class="icon fa-arrow-circle-o-right fa-fw" aria-hidden="true"></i><span class="f2">{L_THE_TEAM}</span></a><br />
+				<hr class="dashed">
+				<div class="menutitle">{L_SBL_HELP}</div>
+				<a href="{U_FAQ}" class="f4"><i class="icon fa-arrow-circle-o-right fa-fw" aria-hidden="true"></i><span class="f2">{L_FAQ}</span></a><br />
+				<a href="{U_HBBC}" class="f4"><i class="icon fa-arrow-circle-o-right fa-fw" aria-hidden="true"></i><span class="f2">{L_BBCODE_GUIDE}</span></a><br />
+				<a href="/ucp.php?mode=terms" class="f4"><i class="icon fa-arrow-circle-o-right fa-fw" aria-hidden="true"></i><span class="f2">{L_TERMS_USE}</span></a><br />
+				<a href="/ucp.php?mode=privacy" class="f4"><i class="icon fa-arrow-circle-o-right fa-fw" aria-hidden="true"></i><span class="f2">{L_PRIVACY}</span></a>
+				
+				
+				
+				</li>
+			</ul>
+		</div>
+</div>
+
+
+	<!-- IF not S_USER_LOGGED_IN and not S_IS_BOT -->
+<div class="forabg">
+		<div class="inner">
+			<ul class="topiclist">
+				<li class="header">
+					<dl class="row-item">
+						<dt>{L_SBL_LOGIN_BOX}</dt>
+						<dd></dd>
+					</dl>
+				</li>
+			</ul>	
+			<ul class="topiclist">
+				<li class="bg1 logbox">
+					<form method="post" action="{S_LOGIN_ACTION}">
+						
+						<fieldset class="quick-login">
+						<label for="username"><span>{L_USERNAME}{L_COLON}</span> 
+						<br />
+						<input type="text" tabindex="1" name="username" id="username" size="25" class="inputbox input1"  title="{L_USERNAME}" /></label>
+						<br />
+						<label for="password"><span>{L_PASSWORD}{L_COLON}</span> 
+						<br />
+						<input type="password" tabindex="2" name="password" id="password" size="10" class="inputbox input1" title="{L_PASSWORD}" autocomplete="off" /></label>
+						<br /><br />
+						
+						<!-- IF U_SEND_PASSWORD -->
+						<a href="{U_SEND_PASSWORD}">{L_FORGOT_PASS}</a>
+						<!-- ENDIF -->
+						<br /><br />
+						<!-- IF S_AUTOLOGIN_ENABLED -->
+						<input type="checkbox" tabindex="4" name="autologin" id="autologin" />&nbsp;<label for="autologin">{L_LOG_ME_IN} </label>
+						<!-- ENDIF --><br /><br />
+						<br />&nbsp; &bull; &nbsp;<input type="submit" tabindex="5" name="login" value="{L_LOGIN}" class="button2" />
+						<br /><br /><!-- IF S_REGISTER_ENABLED -->&nbsp; &bull; &nbsp;<a href="{U_REGISTER}" type="submit" tabindex="5" value="{L_LOGIN}" class="button2" />{L_REGISTER}</a><!-- ENDIF --><br />
+						{S_LOGIN_REDIRECT}
+						</fieldset>
+					
+						
+					</form>
+					 
+				</li>
+			</ul>
+		</div>
+</div>
+	<!-- ENDIF -->
+	<!-- IF S_REGISTERED_USER -->	
+<div class="forabg">
+		<div class="inner">
+			<ul class="topiclist">
+				<li class="header">
+					<dl class="row-item">
+						<dt>{L_SBL_USER_MENU}</dt>
+						<dd></dd>
+					</dl>
+				</li>
+			</ul>	
+			<ul class="topiclist">
+				<li class="bg1 logbox">
+				<div class="ava1"><a href="{U_PROFILE}"> <br />{CURRENT_USER_AVATAR}<br /><span>{CURRENT_USERNAME_SIMPLE}</span></a></div>
+				<hr class="dashed">
+				<div class="menutitle">{L_SBL_MENU}</div>
+					<!-- IF S_DISPLAY_SEARCH -->
+					<a href="{U_NEW_POSTS}" class="f4"><i class="icon fa-arrow-circle-o-right fa-fw" aria-hidden="true"></i><span class="f2">{L_NEW_POSTS}</span></a>
+					<br />
+					<a href="{U_UNREAD_POSTS}" class="f4"><i class="icon fa-arrow-circle-o-right fa-fw" aria-hidden="true"></i><span class="f2">{L_UNREAD_POSTS}</span></a>
+					<br />
+					<a href="{U_SEARCH_SELF}"  class="f4"><i class="icon fa-arrow-circle-o-right fa-fw" aria-hidden="true"></i><span class="f2">{L_SEARCH_SELF}</span></a>
+				<!-- ENDIF -->
+				<br />
+					<a href="/ucp.php?i=ucp_main&mode=bookmarks" class="f4"><i class="icon fa-arrow-circle-o-right fa-fw" aria-hidden="true"></i><span class="f2">{L_VIEW_BOOKMARKS}</span></a>
+				<br />
+					<a href="/ucp.php?i=ucp_main&mode=subscribed" class="f4"><i class="icon fa-arrow-circle-o-right fa-fw" aria-hidden="true"></i><span class="f2">{L_SBL_SUBSCRIPTIONS}</span></a>
+				<br />
+			
+					<a href="{U_VIEW_ALL_NOTIFICATIONS}" class="f4"><i class="icon fa-arrow-circle-o-right fa-fw" aria-hidden="true"></i><span class="f2">{L_NOTIFICATIONS} [</span><strong>{NOTIFICATIONS_COUNT}</strong><span class="f2">]</span></a>
+				<br />
+				<!-- IF S_DISPLAY_PM -->
+					<a href="{U_PRIVATEMSGS}" class="f4"><i class="icon fa-arrow-circle-o-right fa-fw" aria-hidden="true"></i><span class="f2">{L_PRIVATE_MESSAGES} [</span><strong>{PRIVATE_MESSAGE_COUNT}</strong><span class="f2">]</span></a>
+				<!-- ENDIF -->
+							
+				<hr class="dashed">
+				<a href="{U_PROFILE}" class="f4"><i class="icon fa-arrow-circle-o-right fa-fw" aria-hidden="true"></i><span class="f2">{L_PROFILE}</span></a>
+				<br /><!-- IF U_MCP -->
+					<a href="{U_MCP}" class="f4"><i class="icon fa-arrow-circle-o-right fa-fw" aria-hidden="true"></i><span class="f2">{L_MCP}</span></a>
+				<!-- ENDIF -->
+				<br /><!-- IF U_ACP -->
+					<a href="{U_ACP}" class="f4"><i class="icon fa-arrow-circle-o-right fa-fw" aria-hidden="true"></i><span class="f5">{L_ACP}</span></a>
+				<!-- ENDIF -->
+				<br /><a href="{U_LOGIN_LOGOUT}" class="f4"><i class="icon fa-arrow-circle-o-right fa-fw" aria-hidden="true"></i><span class="f2">{L_LOGIN_LOGOUT}</span></a>
+				</li>
+			</ul>
+		</div>
+</div>
+<!-- ENDIF -->
+	

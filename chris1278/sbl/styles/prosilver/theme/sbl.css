@@ -1,0 +1,109 @@
+.navbar {
+	display: none;
+}
+
+
+.navbar2, .navbar3 {
+	background-color: #CADCEB;
+	padding: 3px 10px;
+	border-radius: 7px;
+	
+}
+
+@media (min-width: 900px) {
+.navi2 {
+	display: none;
+}
+}
+	
+	
+
+@media (min-width: 901px) {
+.navi1, .navi3, .login1  {
+  display: none;
+}
+}
+
+@media (min-width: 900px) {
+.sub1 {
+	margin-top: 5px;
+	float: left; 	
+	width: 15%;
+}
+}
+
+@media (max-width: 900px) {
+.sub1{
+  display: none;
+}
+}
+
+@media (min-width: 900px) {
+.sub2 {
+	float: right; 
+	width: 85%;
+}
+}
+
+@media (max-width: 900px) {
+.sub2{
+  float: left;
+  width: 100%;
+}
+}
+
+@media (min-width: 900px) {
+.sub3 {
+	margin-left: 5px;
+}
+\
+
+@media (max-width: 900px) {
+.sub3{
+ margin-left: 0px;
+}
+}
+
+.input1 {
+	min-width: 75%;
+}
+
+.logbox {
+	padding: 0px 5px 5px 5px;
+}
+
+.f1 {
+	text-align: center;
+}
+
+div.menutitle {
+	padding: 1px 0;
+    font: bold 90% 'Trebuchet MS', 'Lucida Grande', Arial, sans-serif;
+    font-size: 90%;
+	font-size: 12px;
+	text-decoration: underline;
+}
+
+.f2 {
+	padding: 3px;
+	font-weight: bold;
+	font-size: 90%;
+}
+
+.f3{
+	position: center;
+}
+
+.f4 {
+	padding: 3px;
+}
+.f5 {
+	color: #aa0000;
+	font-weight: bold;
+	padding: 3px;
+}
+
+.ava1 {
+	text-align: center;
+}
+
